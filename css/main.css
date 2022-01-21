@@ -1,0 +1,620 @@
+/*
+  ========================================
+  Base
+  ========================================
+*/
+
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+	 -moz-box-sizing: border-box;
+	     -box-sizing: border-box;
+}
+
+/* Main elements */
+body {
+	color: #1A3E4C;
+	background: #E4F1F6;
+	font-family: "Verdana";
+}
+
+/* Typography */
+a {
+	text-decoration: none;
+}
+
+h2 {
+	font-size: 1.75rem;
+	font-weight: 600;
+	margin-bottom: 1em;
+}
+
+h3 {
+	font-size: 1.5rem;
+	margin-bottom: 1em;
+}
+
+p {
+	font-size: 1.0rem;
+}
+
+p:not(:last-child) {
+	margin-bottom: 1em;
+}
+
+h2, p {
+	line-height: 1.4em;
+	color: #1A3E4C;
+}
+
+th {
+	font-weight: 600;
+}
+
+hr {
+	max-width: 50%;
+	margin: 5em auto;
+	border-top: 1px solid #67AFCB;
+	border-radius: 5px;
+}
+
+/*
+  ========================================
+  Layout
+  ========================================
+*/
+
+html, body {
+	height: 100%;
+	min-height: 100vh;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	border-bottom: 1px solid #67AFCB;
+}
+
+#main {
+	padding-top: 130px; /* Fixes issue with uneeded padding on mobile because of static header, */
+}						/* but it's hardcoded. */
+
+#footer {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 780px) { /* Disable sticky header on mobile. */
+	#header {
+		position: static;
+	}
+	
+	#main {
+		padding-top: 0;
+	}
+}
+
+#main {
+	flex: auto 1 0;
+}
+
+.l-central-container {
+	margin: 0 auto;
+	max-width: 1130px;
+	width: 100%;
+}
+
+.l-horizontal-padding {
+	padding-left: 4%;
+	padding-right: 4%
+}
+
+.l-vertical-margin {
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.l-margin-bottom > *:not(:last-child) {
+	margin-bottom: 30px;
+}
+
+.l-margin-right > *:not(:last-child) {
+	margin-right: 20px;
+}
+
+.l-fixed-sidebar {
+	position: fixed;
+	top: 40%;
+	left: 0;
+	border-radius: 0 10px 10px 0px;
+	transition: 0.5s;
+}
+
+	.sidebar-btn {
+		display: none;
+		align-self: center;
+	}
+	
+		.sidebar-btn a {
+			color: white;
+		}
+
+@media only screen and (max-width: 1170px) {
+	.l-fixed-sidebar.is-responsive {
+		left: -45px;
+	}
+	
+	.sidebar-btn {
+		display: inline;
+		
+	}
+}
+
+.l-absolute {
+	position: absolute;
+}
+
+.l-relative {
+	position: relative;
+}
+
+.l-flexbox {
+	display: flex;
+}
+
+@media only screen and (max-width: 780px) {
+	.l-flexbox.is-responsive {
+		flex-direction: column;
+	}
+	
+	.l-flexbox.is-responsive > *:not(:last-child) {
+		margin: 0 0 30px 0;
+	}
+}
+
+.l-flexbox > * { /* Set the flexbasis of all flexitems to 1 by default. */
+	flex: 1 0 0;
+}
+
+.l-flexbasis-weighted {
+	flex: 2 0 0;
+}
+
+.l-flexbox > img {
+	align-self: center;
+	max-width: 300px;
+}
+
+.l-flexbox-rows {
+	flex-direction: column;
+}
+
+.l-flexbox-rows > section:not(:last-child) {
+	margin: 0 0 5em 0;
+}
+
+.l-table {
+	border-collapse: collapse;
+	width: 100%;
+	color: #1A3E4C;
+}
+
+	.l-table td, .l-table tr, .l-table th {
+		border: 1px solid #ddd;
+		padding: 0.5rem;
+	}
+
+	.l-table tr:nth-child(even) {
+		background-color: #f2f2f2;
+	}
+
+	.l-table td, .l--table th {
+		padding: 1rem 0;
+		text-align: center;
+	}
+
+	.l-table th {
+		background: #1A3E4C;
+		color: #67AFCB;
+	}
+
+/*
+  ========================================
+  Modules
+  ========================================
+*/
+
+/* Sitewide */
+nav, .nav-icon {
+	display: inline-block;
+	right: 0;
+	bottom: 0;
+}
+
+	nav a, .nav-icon {
+		color: #67AFCB;
+	}
+
+	.nav--primary, .nav-icon {
+		font-size: 1.5rem;
+	}
+
+	.nav--secondary {
+		
+	}
+
+	.nav-icon, .nav-close-btn {
+		display: none;
+	}
+
+.nav-list {
+}
+
+	.nav-list > li {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 12px;
+	}
+
+	.nav-list a {
+		transition: 0.4s;
+		border-bottom: 2px solid transparent;
+	}
+
+		.nav-list a:hover { /* Pseudoselecting li instead of the anchors causes formatting issues with bottom border.*/
+			border-color: #347B98;
+		}
+
+.opaque-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	transition: background-color 0.5s;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 780px) {
+	.nav--primary {
+		display: block;
+		position: fixed;
+		z-index: 1;
+		right: 0;
+		top: 0;
+		width: 0;
+		transition: 0.5s;
+	}
+	
+	.nav-close-btn, .nav--primary li {
+		display: block;
+		margin: 12px;
+	}
+	
+	.nav-close-btn {
+		text-align: right;
+	}
+	
+	.nav-icon {
+		display: inline-block;
+		margin-right: 12px;
+	}
+	
+	.nav--primary.is-responsive {
+		width: 150px;
+		border-left: 1px solid #347B98;
+	}
+	
+	.nav--secondary {
+		position: static;
+		display: block;
+	}
+}
+
+.logo {
+	display: inline-block;
+	padding-top: 1.25rem;
+	margin-left: 12px;
+	border-top: 5px solid #67AFCB;
+	font-size: 2.5rem;
+	text-align: center;
+	color: #67AFCB;
+	transition: 0.3s;
+}
+
+	.logo.shrinks-on-scroll {
+		font-size: 1.5rem;
+		padding-top: 0.5rem;
+		border-top-width: 3.5px;
+	}
+	
+@media only screen and (max-width: 780px) {
+	.logo.shrinks-on-scroll {
+		font-size: 2.5rem;
+		padding-top: 1.25rem;
+		border-top-width: 5px;
+	}
+}
+
+.icon-bar {
+	
+}
+	.icon-bar > * {
+		display: block;
+		text-align: center;
+		font-size: 2rem;
+		margin: 10px;
+		background-color: white;
+	}
+	
+	.icon-bar img {
+		max-height: 32px;
+	}
+	
+	.icon-bar--horizontal > * {
+		display: inline-block;
+	}
+
+/* Home */
+.hero {
+}
+
+.tabs {
+	border: 1px solid #67AFCB;
+}
+	.tabs button { 
+		text-align: left;
+		border: none;
+		font-size: 1.75rem;
+		padding: 22px 16px;
+		cursor: pointer;
+		transition: 0.3s;
+		color: #67AFCB;
+	}
+	
+	.tab-btn:hover {
+		background-color: #347B98;
+	}
+	
+	.tabs-content {
+		display: none;
+		text-align: center;
+		min-height: 264px;
+	}
+		#Math {
+			display: inline;
+		}
+		
+		.tabs-content li {
+			font-size: 1.25rem;
+			margin-bottom: 16px;
+		}
+
+
+/* About */
+.about {
+}
+
+/* Services */
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+}
+
+	.tooltip .tooltip-text {
+		visibility: hidden;
+		width: 200px;
+		background-color: #555;
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		padding: 5px 0;
+		position: absolute;
+		z-index: 1;
+		top: -6px;
+		left: 110%;
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+
+		.tooltip .tooltip-text::after {
+			content: " ";
+			position: absolute;
+			top: 1em;
+			right: 100%;
+			margin-top: -5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: transparent #555 transparent transparent;
+		}
+		
+	.tooltip:hover .tooltip-text {
+		visibility: visible;
+		opacity: 1;
+	}
+
+@media only screen and (max-width: 780px) {
+	.tooltip .tooltip-text {
+		width: 150px;
+	}
+}
+
+.icon-container {
+	flex-wrap: wrap;
+}
+
+	.icon-container > img {
+		max-width: 45%;
+		min-width: 45%;
+	}
+
+/* Contact */
+
+form > * {
+	display: block;
+}
+
+form > input[type=text], form > textarea {
+	padding: 8px 6px;
+	margin-bottom: 6px;
+	width: 100%;
+}
+
+form > textarea {
+	min-height: 200px;
+}
+
+form > input[type=submit] {
+	padding: 12px 20px;
+}
+
+form > label {
+	margin-bottom: 5px;
+}
+
+/*
+  ========================================
+  Themes
+  ========================================
+*/
+
+.color-primary-bg {
+	background-color: #E4F1F6;
+}
+
+.color-secondary-bg {
+	background-color: #1A3E4C;
+}
+
+.font-color-secondary {
+	color: #67AFCB;
+}
+
+.border-radius {
+	border-radius: 5px;
+}
+
+.border-radius-tight {
+	border-radius: 10px;
+}
+
+.box-shadow {
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3),0 2px 10px 0 rgba(0,0,0,0.2);
+}
+
+.page-divider {
+	border-top: 2px solid black;
+}
+
+.facebook {
+	background: #3B5998;
+	color: white;
+}
+
+.twitter {
+	background: #55ACEE;
+	color: white;
+}
+
+.reddit {
+	background: #FF4301;
+	color: white;
+}
+
+.twitch {
+	background: #6441a5;
+	color: white;
+}
+
+.paypal {
+	color: #00457C;
+}
+
+.skype {
+	color: #00aff0;
+}
+
+.arrow {
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+}
+
+	.right {
+		transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+	}
+	
+	.left {
+		transform: rotate(135deg);
+		-webkit-transform: rotate(135deg);
+	}
+
+/*
+  ========================================
+  State
+  ========================================
+*/
+.is-active {
+	color: #347B98;
+}
+
+.is-active.tab-btn {
+	background-color: #347B98;
+}

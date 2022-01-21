@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Taught by Alex</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  
+  <body class="color-primary-bg">
+  
+		<header id="header" class="color-secondary-bg box-shadow">
+		
+			<div class="l-central-container">
+				<div class="l-vertical-margin"> <!-- A separate div is necessary because the vertical padding is % of containing width.-->
+					<div class="l-relative">
+						<!-- Logo -->
+						<h1 class="logo">Taught<br>by Alex</h1>
+						<!-- Navigation -->
+						<div class="opaque-overlay" onclick="closeNav()"></div>
+						<nav class="l-absolute nav--primary color-secondary-bg"> 
+							<ul class="nav-list">
+								<li><a rel="canonical" href="javascript:void(0)" class="nav-close-btn" onclick="closeNav()">&times;</a></li>
+								<li><a rel="canonical" class="is-active" href="https://taughtbyalex.com">Home</a></li>
+								<li><a rel="canonical" href="https://taughtbyalex.com/about">About</a></li>
+								<li><a rel="canonical" href="https://taughtbyalex.com/services">Services</a></li>
+								<li><a rel="canonical" href="https://taughtbyalex.com/contact">Contact</a></li>
+							</ul>
+						</nav>
+						<a href="javascript:void(0);" class="nav-icon l-absolute" onclick="openNav()">
+								<i class="fa fa-bars"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main id="main">
+		
+			<div class="l-central-container l-horizontal-padding l-vertical-margin l-margin-bottom">
+				
+				<h2>Quality Online Tutoring</h2>
+				<!-- Home content -->
+				<div class="l-flexbox l-margin-right is-responsive">
+					<article>
+						<p>
+							Hello! My name is Alex Kliger. I offer high-quality online tutoring that
+							seamlessly transitions students to distance learning. Through the use of
+							dedicated hardware and cutting-edge audiovisual and digital writing technology,
+							my service makes learning online just as effective as in person.
+						</p>
+							
+						<p>
+							To set up a full session or a free 15-minute consultation plese visit my contact
+							page.
+						</p>
+							
+						<p>
+							To get an idea of what it's like to work with me, view the video
+							down below.
+						</p>
+					</article>
+
+					<!-- Subject tabs -->
+					<div class="tabs l-flexbox box-shadow">
+						<!-- Tab buttons -->
+						<div class="l-flexbox l-flexbox-rows">
+							<button class="color-secondary-bg tab-btn is-active" onclick="selectTab(event, 'Math')">Math</button>
+							<button class="color-secondary-bg tab-btn" onclick="selectTab(event, 'Science')">Science</button>
+							<button class="color-secondary-bg tab-btn" onclick="selectTab(event, 'Exams')">Exams</button>
+						</div>
+						<!-- Math tab -->
+						<div id="Math" class="tabs-content l-vertical-margin">
+							<h3>Math</h3>
+							<ul>
+								<li>Elementary Math</li>
+								<li>Pre-Algebra</li>
+								<li>Algebra I/II</li>
+								<li>Geometry</li>
+								<li>Trigonometry</li>
+								<li>Calculus I/II</li>
+							</ul>
+						</div>
+						<!-- Science tab -->
+						<div id="Science" class="tabs-content l-vertical-margin">
+							<h3>Science</h3>
+							<ul>
+								<li>Physics</li>
+								<li>Biology</li>
+								<li>Chemistry</li>
+							</ul>
+						</div>
+						<!-- Exams tab -->
+						<div id="Exams" class="tabs-content l-vertical-margin">
+							<h3>Exams</h3>
+							<ul>
+								<li>SAT</li>
+								<li>ACT</li>
+								<li>ISEE</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Hero video -->
+				<video class="box-shadow" style="background-color:black; width:100%;" controls> <!-- I have no idea why setting width to 100% fixes the aspect ratio issue of a video flex item. -->
+				</video>
+			</div>
+		</main>
+		
+		<footer id="footer" class="color-secondary-bg font-color-secondary l-horizontal-padding">
+			<div class="l-central-container">
+				<div class="l-relative">
+					<!-- Copyright -->
+					<span>&copy; Tutored by Alex 2020</span>
+					<!-- Navigation -->
+					<nav class="l-absolute nav--secondary">
+						<ul class="nav-list">
+							<li><a href="javascript:void(0);">Terms of Service</a></li>
+							<li><a href="javascript:void(0);">Privacy Policy</a></li>
+							<li><a href="javascript:void(0);">Refund Policy</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</footer>
+		
+		<!-- Socials bar -->
+		<div class="l-fixed-sidebar is-responsive color-secondary-bg box-shadow">
+			<div class="l-flexbox">
+				<div class="icon-bar" style="display:inline-block;">
+					<a href="#" class="facebook border-radius"><i class="fa fa-facebook"></i></a>
+					<a href="#" class="twitter border-radius"><i class="fa fa-twitter"></i></a>
+					<a href="#" class="reddit border-radius"><i class="fa fa-reddit"></i></a>
+					<a href="#" class="twitch border-radius"><i class="fa fa-twitch"></i></a>
+				</div><!--
+		 --><div class="sidebar-btn">
+					<a href="javascript:void(0)" onclick="toggleSidebar()">||</a>
+				</div>
+			</div>
+		</div>
+		
+		<script src="assets/js/shrinkHeader.js"></script>
+		<script src="assets/js/selectTab.js"></script>
+		<script src="assets/js/sideNav.js"></script>
+		<script src="assets/js/toggleSidebar.js"></script>
+		
+  </body>
+</html>

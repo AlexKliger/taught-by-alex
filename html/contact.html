@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Taught by Alex</title>
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  
+  <body class="color-primary-bg">
+  
+		<header id="header" class="color-secondary-bg box-shadow">
+		
+			<div class="l-central-container">
+				<div class="l-vertical-margin">
+					<div class="l-relative">
+						<h1 class="logo">Taught<br>by Alex</h1>
+						<div class="opaque-overlay" onclick="closeNav()"></div>
+						<nav class="l-absolute nav--primary color-secondary-bg">  
+							<ul class="nav-list">
+								<li><a rel="canonical" href="javascript:void(0)" class="nav-close-btn" onclick="closeNav()">&times;</a></li>
+								<li><a rel="canonical" href="https://taughtbyalex.com">Home</a></li>
+								<li><a rel="canonical" href="https://taughtbyalex.com/about">About</a></li>
+								<li><a rel="canonical" href="https://taughtbyalex.com/services">Services</a></li>
+								<li><a rel="canonical" class="is-active" href="https://taughtbyalex.com/contact">Contact</a></li>
+							</ul>
+						</nav>
+						<a href="javascript:void(0);" class="nav-icon l-absolute" onclick="openNav()">
+								<i class="fa fa-bars"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main id="main">
+			<div class="l-central-container l-horizontal-padding l-vertical-margin l-margin-bottom">
+				<!-- Phone -->
+				<section>
+					<h2>Phone</h2>
+					<div class="l-flexbox is-responsive">
+						<div class="l-horizontal-padding">
+							<h3 style="text-align:center;">305-857-5641</h3>
+							<img src="assets/images/phone.svg" style="width:100%;">
+						</div>
+						<div class="l-flexbasis-weighted">
+							<p>
+								Feel free to call or text me during my normal operating hours.
+							</p>
+							<table class="l-table">
+								<tr>
+									<th>Day</th>
+									<th>Hours</th>
+								</tr>
+								<tr>
+									<td>Monday-Friday</td>
+									<td>10:00am-7:00pm U.S. EST</td>
+								</tr>
+								<tr>
+									<td>Saturday-Sunday</td>
+									<td>12:00pm-5:00pm U.S. EST</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</section>
+				<hr></hr>
+				<!-- Email -->
+				<section>
+					<h2>Email</h2>
+					<div class="l-flexbox is-responsive">
+						<div class="l-horizontal-padding">
+							<div class="l-flexbasis-weighted">
+								<p>
+									The best way to set up an appointment or a free 15 minute consulation would be
+									to send me an email.<br><br>Please include the course subject in the subject line.
+									In the body of your message, indicate:<br><br>1. your preferred time, and<br><br>2. at
+									least one alternative time.
+								</p>
+							</div>
+							<img src="assets/images/email.svg" style="width:100%;">
+						</div>
+						<form class="l-flexbasis-weighted" action="https://formspree.io/f/mvovdyoe" method="POST">
+							<label for="form-name">Name</label>
+							<input type="text" id="form-name" name="name">
+								
+							<label for="form-email">Email</label>
+							<input type="text" id="form-email" name="email">
+								
+							<label for="form-subject">Subject</label>
+							<input type="text" id="form-subject" name="subject">
+								
+							<label for="form-message">Message</label>
+							<textarea id="form-message", name="message"></textarea>
+								
+							<input class="color-secondary-bg font-color-secondary border-radius" type="submit" value="Submit">
+						</form>
+					</div>
+				</section>
+				<hr></hr>
+			</div>
+		</main>
+		
+		<footer id="footer" class="color-secondary-bg font-color-secondary">
+			<div class="l-central-container">
+				<div class="l-relative">
+					<span>&copy; Tutored by Alex 2020</span>
+					<nav class="l-absolute nav--secondary">
+						<ul class="nav-list">
+							<li><a href="google.com">Terms of Service</a></li>
+							<li><a href="google.com">Privacy Policy</a></li>
+							<li><a href="google.com">Refund Policy</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</footer>
+		
+		
+		<!-- Socials bar -->
+		<div class="l-fixed-sidebar is-responsive color-secondary-bg box-shadow">
+			<div class="l-flexbox">
+				<div class="icon-bar" style="display:inline-block;">
+					<a href="#" class="facebook border-radius"><i class="fa fa-facebook"></i></a>
+					<a href="#" class="twitter border-radius"><i class="fa fa-twitter"></i></a>
+					<a href="#" class="reddit border-radius"><i class="fa fa-reddit"></i></a>
+					<a href="#" class="twitch border-radius"><i class="fa fa-twitch"></i></a>
+				</div><!--
+		 --><div class="sidebar-btn">
+					<a href="javascript:void(0)" onclick="toggleSidebar()">||</a>
+				</div>
+			</div>
+		</div>
+		
+		<script src="assets/js/shrinkHeader.js"></script>
+		<script src="assets/js/sideNav.js"></script>
+		<script src="assets/js/toggleSidebar.js"></script>
+		
+  </body>
+</html>
