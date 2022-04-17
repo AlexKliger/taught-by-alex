@@ -1,0 +1,27 @@
+:root {
+    --color-primary: #ffffff;
+    --color-secondary: blue;
+
+    --font-size-small: 16px;
+    --font-size-medium: 18px;
+    --font-size-large: 24px;
+    --font-size-header: 40px;
+}
+
+.l-main-content {
+    padding-left: 30%;
+    padding-right: 15%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex--column {
+    flex-direction: column;
+}
+
+.flex--center {
+    align-items: center;
+    justify-content: center;
+}

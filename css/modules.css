@@ -1,0 +1,37 @@
+.card {
+    padding: 2em 1em;
+    text-align: center;
+}
+
+    .card__icon {
+        font-size: 50px;
+    }
+
+    .card__title {
+        margin: 1em 0;
+    }
+
+    .card__text {
+        font-size: var(--font-size-medium);
+    }
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+    .header__content {
+        width: 70%;
+        min-height: 90%;
+        justify-content: space-between;
+    }
+
+.overview {
+    padding: 2em 0;
+    gap: 2em;
+}
