@@ -2,16 +2,28 @@
     background-color: var(--color-primary);
 }
 
+.bg--secondary {
+    background-color: var(--color-secondary);
+}
+
 .border-radius {
     border-radius: 5px;
+}
+
+.border-top {
+    border-top: 4px var(--color-tertiary) solid;
 }
 
 .box-shadow {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3),0 2px 10px 0 rgba(0,0,0,0.2);
 }
 
-.font-color--primary {
-    color: var(--color-primary);
+.font-color--secondary {
+    color: var(--color-secondary);
+}
+
+.font-color--tertiary {
+    color: var(--color-tertiary);
 }
 
 .font-size--medium {

@@ -1,6 +1,11 @@
+a {
+    text-decoration: none;
+}
+
 :root {
-    --color-primary: #ffffff;
-    --color-secondary: blue;
+    --color-primary: #336699;
+    --color-secondary: #FFFFFF;
+    --color-tertiary: #669966;
 
     --font-size-small: 16px;
     --font-size-medium: 18px;

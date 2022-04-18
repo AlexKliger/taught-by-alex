@@ -11,18 +11,35 @@
   </head>
 
   <body>
+    <!----------------->
+    <!-- Side Header -->
+    <!----------------->
     <header class="flex flex--center">
-      <div class="header__content flex flex--column border-radius box-shadow bg--primary">
-        <h1>Taught by Alex</h1>
-        <nav>
-          <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>About</li>
-            <li>Contact</li>
+      <div class="header__content flex flex--column border-radius border-top box-shadow bg--primary">
+        <h1 style="font-size: 48px;" class="font-color--secondary">Taught by Alex</h1>
+        <nav class="nav--primary">
+          <ul class="flex flex--column">
+            <li><a class="font-color--secondary font-size--large" href="#">Home</a></li>
+            <li><a class="font-color--secondary font-size--large" href="#">Services</a></li>
+            <li><a class="font-color--secondary font-size--large" href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav--socials">
+          <ul class="flex">
+            <li>
+              <a class="font-color--secondary" href="#"><i class="fa fa-linkedin-square"></i></a>
+            </li>
+            <li>
+              <a class="font-color--secondary" href="#"><i class="fa fa-facebook-square"></i></a>
+            </li>
+            <li>
+              <a class="font-color--secondary" href="#"><i class="fa fa-twitter-square"></i></a>
+            </li>
           </ul>
         </nav>
       </div>
+
     </header>
 
     <main>
@@ -31,27 +48,27 @@
       <!------------->
       <section id="landing">
         <div class="parallax l-main-content">
-          <h2 class="font-size--header font-color--primary">Quality Online Tutoring</h2>
+          <h2 class="font-size--header font-color--secondary">Quality Online Tutoring</h2>
         </div>
         <div class="l-main-content">
           <!-- Overview -->
           <div style="transform: translateY(-25%);" class="overview flex">
-            <section class="card border-radius box-shadow bg--primary">
-              <span class="card__icon"><i class="fa fa-code-fork"></i></span>
+            <section class="card border-radius border-top box-shadow bg--secondary">
+              <span class="card__icon font-color--tertiary"><i class="fa fa-code-fork"></i></span>
               <h3 class="card__title font-size--large">Lorem Ipsum</h3>
-              <p class="font-size--medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sapiente odit minima, est cupiditate corporis, optio suscipit deserunt sequi unde architecto sunt pariatur impedit facilis nam distinctio aperiam dolores quas!</p>
+              <p class="card__text font-size--medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sapiente odit minima, est cupiditate corporis, optio suscipit deserunt sequi unde architecto sunt pariatur impedit facilis nam distinctio aperiam dolores quas!</p>
             </section>
 
-            <section class="card border-radius box-shadow bg--primary">
-              <span class="card__icon"><i class="fa fa-code-fork"></i></span>
+            <section class="card border-radius border-top box-shadow bg--secondary">
+              <span class="card__icon font-color--tertiary"><i class="fa fa-code-fork"></i></span>
               <h3 class="card__title font-size--large">Lorem Ipsum</h3>
-              <p class="font-size--medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sapiente odit minima, est cupiditate corporis, optio suscipit deserunt sequi unde architecto sunt pariatur impedit facilis nam distinctio aperiam dolores quas!</p>
+              <p class="card__text font-size--medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sapiente odit minima, est cupiditate corporis, optio suscipit deserunt sequi unde architecto sunt pariatur impedit facilis nam distinctio aperiam dolores quas!</p>
             </section>
 
-            <section class="card border-radius box-shadow bg--primary">
-              <span class="card__icon"><i class="fa fa-code-fork"></i></span>
+            <section class="card border-radius border-top box-shadow bg--secondary">
+              <span class="card__icon font-color--tertiary"><i class="fa fa-code-fork"></i></span>
               <h3 class="card__title font-size--large">Lorem Ipsum</h3>
-              <p class="font-size--medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sapiente odit minima, est cupiditate corporis, optio suscipit deserunt sequi unde architecto sunt pariatur impedit facilis nam distinctio aperiam dolores quas!</p>
+              <p class="card__text font-size--medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sapiente odit minima, est cupiditate corporis, optio suscipit deserunt sequi unde architecto sunt pariatur impedit facilis nam distinctio aperiam dolores quas!</p>
             </section>
           </div>
         </div>
@@ -62,14 +79,14 @@
       <!-------------->
       <section id="services">
         <div class="parallax l-main-content">
-          <h2 class="font-size--header font-color--primary">Services</h2>
+          <h2 class="font-size--header font-color--secondary">Services</h2>
         </div>
         <!-- Services table -->
-        <div class="services__table l-main-content">
+        <div style="transform: translateY(-10%);" class="services__table l-main-content">
           <section class="service">
             <!-- Math -->
             <img class="service__img" src="./img/service-math.jpg" alt="Math">
-            <div class="service__content card border-radius box-shadow bg--primary">
+            <div class="service__content card border-radius border-top box-shadow bg--secondary">
               <h3 class="card__title font-size--large">Math</h3>
               <p class="card__text font-size--medium">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam praesentium assumenda reiciendis dicta molestiae ex, corporis, et rem cumque, inventore hic totam sit excepturi ab sapiente tenetur minima? Nisi, quia.</p>
             </div>
@@ -77,7 +94,7 @@
           <!-- Testing -->
           <section class="service">
             <img class="service__img service__img--align-right" src="./img/service-testing.jpg" alt="Testing">
-            <div class="service__content card border-radius box-shadow bg--primary">
+            <div class="service__content card border-radius border-top box-shadow bg--secondary">
               <h3 class="card__title font-size--large">Testing</h3>
               <p class="card__text font-size--medium">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam praesentium assumenda reiciendis dicta molestiae ex, corporis, et rem cumque, inventore hic totam sit excepturi ab sapiente tenetur minima? Nisi, quia.</p>
             </div>
@@ -85,20 +102,11 @@
           <!-- Science -->
           <section class="service">
             <img class="service__img" src="./img/service-science.jpg" alt="Science">
-            <div class="service__content card border-radius box-shadow bg--primary">
+            <div class="service__content card border-radius border-top box-shadow bg--secondary">
               <h3 class="card__title font-size--large">Science</h3>
               <p class="card__text font-size--medium">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam praesentium assumenda reiciendis dicta molestiae ex, corporis, et rem cumque, inventore hic totam sit excepturi ab sapiente tenetur minima? Nisi, quia.</p>
             </div>
           </section>
-        </div>
-      </section>
-
-      <!----------->
-      <!-- About -->
-      <!----------->
-      <section id="about">
-        <div class="parallax l-main-content">
-          <h2 class="font-size--header font-color--primary">About</h2>
         </div>
       </section>
 
@@ -107,7 +115,31 @@
       <!------------->
       <section id="contact">
         <div class="parallax l-main-content">
-          <h2 class="font-size--header font-color--primary">Contact</h2>
+          <h2 class="font-size--header font-color--secondary">Contact</h2>
+        </div>
+        <div class="l-main-content">
+          <form style="transform: translateY(-25%);" class="contact__form flex border-radius font-color--secondary border-top box-shadow bg--primary">
+            <section class="contact__input flex flex--column">
+              <label for="name">Name</label>
+              <input type="text" name="name">
+              
+              <label for="email">Email</label>
+              <input type="text" name="email">
+  
+              <label for="subject">Subject</label>
+              <input type="text" name="subject">
+  
+              <label for="message">Message</label>
+              <textarea name="message"></textarea>
+
+              <input type="submit" value="Submit"></input>
+            </section>
+            <section class="contact__info flex flex--column">
+              <div><i class="fa fa-circle"></i><span class="font-size--large">555-555-5555</span></div>
+              <div><i class="fa fa-circle"></i><span class="font-size--large">email@domain.com</span></div>
+              <div><i class="fa fa-circle"></i><span class="font-size--large">Your computer</span></div>
+            </section>
+          </form>
         </div>
       </section>
     </main>
