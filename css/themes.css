@@ -2,8 +2,16 @@
     background-color: var(--color-primary);
 }
 
+    .bg--primary-light {
+        background-color: var(--color-primary-light);
+    }
+
 .bg--secondary {
     background-color: var(--color-secondary);
+}
+
+.bg--tertiary {
+    background-color: var(--color-tertiary);
 }
 
 .border-radius {
@@ -43,7 +51,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height: 400px;
+	min-height: 500px;
 	box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
 }
 

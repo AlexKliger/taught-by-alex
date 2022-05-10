@@ -17,11 +17,13 @@
     <header class="flex flex--center">
       <div class="header__content flex flex--column border-radius border-top box-shadow bg--primary">
         <h1 style="font-size: 48px;" class="font-color--secondary">Taught by Alex</h1>
+        <img style="width: 200px; border-radius: 50%;" src="./img/me.jpg" alt="Alex Kliger">
+        <p class="header__text font-color--secondary font-size--medium">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut sed corrupti enim. Pariatur error, autem odio doloremque suscipit beatae voluptate quae odit corporis aperiam? Nemo facere velit adipisci nihil iure!</p>
         <nav class="nav--primary">
           <ul class="flex flex--column">
-            <li><a class="font-color--secondary font-size--large" href="#">Home</a></li>
-            <li><a class="font-color--secondary font-size--large" href="#">Services</a></li>
-            <li><a class="font-color--secondary font-size--large" href="#">Contact</a></li>
+            <li><a class="font-color--secondary font-size--large" href="#landing">Home</a></li>
+            <li><a class="font-color--secondary font-size--large" href="#services">Services</a></li>
+            <li><a class="font-color--secondary font-size--large" href="#contact">Contact</a></li>
           </ul>
         </nav>
 
@@ -46,28 +48,41 @@
       <!------------->
       <!-- Landing -->
       <!------------->
-      <section id="landing">
-        <div class="parallax l-main-content">
+      <section id="landing" class="bg--primary">
+        <div class="section__header parallax l-main-content">
           <h2 class="font-size--header font-color--secondary">Quality Online Tutoring</h2>
+          <p style="margin-bottom: 0.5em;" class="section__text font-size--large font-color--secondary">I provide high-quality distance learning.</p>
+          <p style="margin-bottom: 2em;" class="font-size--large font-color--secondary">Schedule a free 15 minute consultation!</p>
+          <button style="margin-right: 3em" class="btn bg--tertiary font-color--secondary font-size--medium border-radius">Get in touch</button>
+          <button class="btn bg--tertiary font-color--secondary font-size--medium border-radius">Learn more</button>
         </div>
         <div class="l-main-content">
           <!-- Overview -->
-          <div style="transform: translateY(-25%);" class="overview flex">
-            <section class="card border-radius border-top box-shadow bg--secondary">
-              <span class="card__icon font-color--tertiary"><i class="fa fa-code-fork"></i></span>
-              <h3 class="card__title font-size--large">Lorem Ipsum</h3>
+          <div style="transform: translateY(-15%);" class="overview flex">
+            <section class="card card--long border-radius border-top box-shadow bg--secondary">
+              <span class="fa fa-stack fa-2x">
+                <i class="font-color--tertiary fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-phone fa-stack-1x"></i>
+              </span>
+              <h3 class="card__title font-size--large">Latest Technology</h3>
               <p class="card__text font-size--medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sapiente odit minima, est cupiditate corporis, optio suscipit deserunt sequi unde architecto sunt pariatur impedit facilis nam distinctio aperiam dolores quas!</p>
             </section>
 
-            <section class="card border-radius border-top box-shadow bg--secondary">
-              <span class="card__icon font-color--tertiary"><i class="fa fa-code-fork"></i></span>
-              <h3 class="card__title font-size--large">Lorem Ipsum</h3>
+            <section class="card card--long border-radius border-top box-shadow bg--secondary">
+              <span class="fa fa-stack fa-2x">
+                <i class="font-color--tertiary fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-phone fa-stack-1x"></i>
+              </span>
+              <h3 class="card__title font-size--large">Flexible Scheduling</h3>
               <p class="card__text font-size--medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sapiente odit minima, est cupiditate corporis, optio suscipit deserunt sequi unde architecto sunt pariatur impedit facilis nam distinctio aperiam dolores quas!</p>
             </section>
 
-            <section class="card border-radius border-top box-shadow bg--secondary">
-              <span class="card__icon font-color--tertiary"><i class="fa fa-code-fork"></i></span>
-              <h3 class="card__title font-size--large">Lorem Ipsum</h3>
+            <section class="card card--long border-radius border-top box-shadow bg--secondary">
+              <span class="fa fa-stack fa-2x">
+                <i class="font-color--tertiary fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-phone fa-stack-1x"></i>
+              </span>
+              <h3 class="card__title font-size--large">Personalized Learning</h3>
               <p class="card__text font-size--medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sapiente odit minima, est cupiditate corporis, optio suscipit deserunt sequi unde architecto sunt pariatur impedit facilis nam distinctio aperiam dolores quas!</p>
             </section>
           </div>
@@ -78,8 +93,9 @@
       <!-- Services -->
       <!-------------->
       <section id="services">
-        <div class="parallax l-main-content">
+        <div class="section__header parallax l-main-content">
           <h2 class="font-size--header font-color--secondary">Services</h2>
+          <p class="section__text font-size--large font-color--secondary">I offer tutoring in the following subjects of speciality...</p>
         </div>
         <!-- Services table -->
         <div style="transform: translateY(-10%);" class="services__table l-main-content">
@@ -114,8 +130,9 @@
       <!-- Contact -->
       <!------------->
       <section id="contact">
-        <div class="parallax l-main-content">
+        <div class="section__header parallax l-main-content">
           <h2 class="font-size--header font-color--secondary">Contact</h2>
+          <p class="section__text font-size--large font-color--secondary">If you have questions or looking to schedule, feel free to get in touch.</p>
         </div>
         <div class="l-main-content">
           <form style="transform: translateY(-25%);" class="contact__form flex border-radius font-color--secondary border-top box-shadow bg--primary">
@@ -132,17 +149,38 @@
               <label for="message">Message</label>
               <textarea name="message"></textarea>
 
-              <input type="submit" value="Submit"></input>
+              <input class="bg--tertiary font-color--secondary" type="submit" value="Submit"></input>
             </section>
             <section class="contact__info flex flex--column">
-              <div><i class="fa fa-circle"></i><span class="font-size--large">555-555-5555</span></div>
-              <div><i class="fa fa-circle"></i><span class="font-size--large">email@domain.com</span></div>
-              <div><i class="fa fa-circle"></i><span class="font-size--large">Your computer</span></div>
+              <div>
+                <span class="fa fa-stack fa-2x">
+                  <i class="font-color--tertiary fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-phone fa-stack-1x"></i>
+                </span>
+                <span class="font-size--large">555-555-5555</span>
+              </div>
+              <div>
+                <span class="fa fa-stack fa-2x">
+                  <i class="font-color--tertiary fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+                <span class="font-size--large">email@domain.com</span>
+              </div>
+              <div>
+                <span class="fa fa-stack fa-2x">
+                  <i class="font-color--tertiary fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-map-marker fa-stack-1x"></i>
+                </span>
+                <span class="font-size--large">Your computer</span>
+              </div>
             </section>
           </form>
         </div>
       </section>
     </main>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="js/scrollToAnchor.js" type="text/javascript"></script>
 
     <footer>
 

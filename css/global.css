@@ -1,21 +1,27 @@
+
+:root {
+    --color-primary: #336699;
+    --color-primary-light: hsl(210, 50%, 45%);
+    --color-secondary: #FFFFFF;
+    --color-tertiary: #669966;
+    
+    --font-size-small: 16px;
+    --font-size-medium: 18px;
+    --font-size-large: 24px;
+    --font-size-header: 48px;
+}
+
 a {
     text-decoration: none;
 }
 
-:root {
-    --color-primary: #336699;
-    --color-secondary: #FFFFFF;
-    --color-tertiary: #669966;
-
-    --font-size-small: 16px;
-    --font-size-medium: 18px;
-    --font-size-large: 24px;
-    --font-size-header: 40px;
+h2, h3 {
+    font-weight: 600;
 }
 
 .l-main-content {
     padding-left: 30%;
-    padding-right: 15%;
+    padding-right: 5%;
 }
 
 .flex {

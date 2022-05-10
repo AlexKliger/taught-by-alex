@@ -2,10 +2,20 @@
 /* Sitewide */
 /***********/
 
+.btn {
+    padding: 0.75em 1.5em;
+    border: none;
+    cursor: pointer;
+}
+
 .card {
     padding: 2em 1em;
     text-align: center;
 }
+
+    .card--long {
+        padding-bottom: 10em;
+    }
 
     .card__icon {
         font-size: 50px;
@@ -19,6 +29,14 @@
         opacity: 0.75;
     }
 
+.section__header {
+    padding-top: 5em;
+}
+
+.section__text {
+    margin-top: 2em;
+}
+
 /**********/
 /* Header */
 /**********/
@@ -29,6 +47,7 @@ header {
     top: 0;
     bottom: 0;
     width: 30%;
+    z-index: 1;
 }
 
     .header__content {
@@ -39,8 +58,13 @@ header {
         justify-content: space-between;
     }
 
+    .header__text {
+        text-align: center;
+    }
+
 .nav--primary {
     align-self: flex-end;
+    margin: 4em 0;
 }
 
 .nav--primary > .flex {
@@ -59,9 +83,14 @@ header {
 /***********/
 /* Landing */
 /***********/
+#landing {
+    height: 100vh;
+}
+
 
 .overview {
     gap: 2em;
+    clip-path: polygon(0 0, 0 90%, 50% 100%, 100% 90%, 100% 0);
 }
 
 /************/
@@ -94,9 +123,8 @@ header {
 /***********/
 
 .contact__form {
-    width: 80%;
     margin: 0 auto;
-    padding: 2em 1em;
+    padding: 3em 2em;
 }
 
 
@@ -123,7 +151,7 @@ input[type=text], textarea {
 }
 
 input[type=submit] {
-    width: 25%;
+    width: 20%;
     border-radius: 4px;
     padding: 0.5em 1em;
     border: none;
