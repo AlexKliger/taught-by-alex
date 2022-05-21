@@ -3,7 +3,6 @@
 /***********/
 
 .btn {
-    padding: 0.75em 1.5em;
     border: none;
     cursor: pointer;
 }
@@ -27,6 +26,7 @@
 
     .card__text {
         opacity: 0.75;
+        line-height: 1.2;
     }
 
 .section__header {
@@ -35,6 +35,37 @@
 
 .section__text {
     margin-top: 2em;
+}
+
+.main-content {
+    padding-left: var(--header-width);
+    padding-right: 5%;
+}
+
+.section-content {
+    transform: translateY(-100px);
+}
+
+.title-bar {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: none;
+}
+
+.header-toggle {
+    margin: 0.25em;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1600px) {
+    .main-content {
+        padding-left: 5%;
+    }
+
+    .title-bar {
+        display: inline;
+    }
 }
 
 /**********/
@@ -46,8 +77,9 @@ header {
     left: 0;
     top: 0;
     bottom: 0;
-    width: 30%;
+    width: var(--header-width);
     z-index: 1;
+    transition: 1s;
 }
 
     .header__content {
@@ -80,29 +112,56 @@ header {
     justify-content: space-between;
 }
 
+/* Media queries */
+@media only screen and (max-width: 1600px) {
+    header.is-hidden {
+        transform: translateX(calc(-1*100%));
+    }
+}
+
 /***********/
 /* Landing */
 /***********/
+
 #landing {
-    height: 100vh;
+    min-height: 100vh;
 }
 
+.landing__btn {
+    padding: 0.75em 1.5em;
+}
 
 .overview {
     gap: 2em;
+    min-height: 500px;
     clip-path: polygon(0 0, 0 90%, 50% 100%, 100% 90%, 100% 0);
+}
+
+    .overview > * {
+        flex: 1;
+    }
+
+/* Media queries */
+@media only screen and (max-width: 700px) {
+    .overview {
+        flex-direction: column;
+    }
 }
 
 /************/
 /* Services */
 /************/
 
+.services__table {
+    gap: 2em;
+}
+
 .service {
     position: relative;
 }
 
     .service__img {
-        width: 40%;
+        width: 500px;
     }
 
     .service__img--align-right {
@@ -112,11 +171,35 @@ header {
     }
 
     .service__content {
+        min-width: 250px;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
+@media only screen and (max-width: 700px) {
+    .services__table {
+        align-items: center;
+        gap: 8em;
+        margin-bottom: 5em;
+    }
+
+    .service__img {
+        width: 350px;
+    }
+
+    .service__img--align-right {
+        position: static;
+        transform: translateX(0);
+    }
+
+    .service__content {
+        top: 25%;
+        transform: translateX(-50%);
+    }
+
+}
 
 /***********/
 /* Contact */

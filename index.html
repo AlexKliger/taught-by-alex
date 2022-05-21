@@ -11,6 +11,13 @@
   </head>
 
   <body>
+    <!--------------->
+    <!-- Title Bar -->
+    <!--------------->
+    <span class="title-bar bg--primary box-shadow">
+      <button class="btn header-toggle bg--primary font-color--secondary font-size--large"><i class="fa fa-navicon"></i></button>
+    </span>
+
     <!----------------->
     <!-- Side Header -->
     <!----------------->
@@ -49,23 +56,23 @@
       <!-- Landing -->
       <!------------->
       <section id="landing" class="bg--primary">
-        <div class="section__header parallax l-main-content">
+        <div class="section__header parallax main-content">
           <h2 class="font-size--header font-color--secondary">Quality Online Tutoring</h2>
           <p style="margin-bottom: 0.5em;" class="section__text font-size--large font-color--secondary">I provide high-quality distance learning.</p>
           <p style="margin-bottom: 2em;" class="font-size--large font-color--secondary">Schedule a free 15 minute consultation!</p>
-          <button style="margin-right: 3em" class="btn bg--tertiary font-color--secondary font-size--medium border-radius">Get in touch</button>
-          <button class="btn bg--tertiary font-color--secondary font-size--medium border-radius">Learn more</button>
+          <button style="margin-right: 3em" class="btn landing__btn bg--tertiary font-color--secondary font-size--medium border-radius">Get in touch</button>
+          <button class="btn landing__btn bg--tertiary font-color--secondary font-size--medium border-radius">Learn more</button>
         </div>
-        <div class="l-main-content">
+        <div class="main-content section-content">
           <!-- Overview -->
-          <div style="transform: translateY(-15%);" class="overview flex">
+          <div class="overview flex">
             <section class="card card--long border-radius border-top box-shadow bg--secondary">
               <span class="fa fa-stack fa-2x">
                 <i class="font-color--tertiary fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-phone fa-stack-1x"></i>
               </span>
               <h3 class="card__title font-size--large">Latest Technology</h3>
-              <p class="card__text font-size--medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sapiente odit minima, est cupiditate corporis, optio suscipit deserunt sequi unde architecto sunt pariatur impedit facilis nam distinctio aperiam dolores quas!</p>
+              <p class="card__text font-size--medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sapiente odit minima, est cupiditate corporis, optio suscipit deserunt sequi unde architecto sunt pariatur impedit facilis nam distinctio aperiam dolores quas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sapiente odit minima, est cupiditate corporis, optio suscipit deserunt sequi unde architecto sunt pariatur impedit facilis nam distinctio aperiam dolores quas!</p>
             </section>
 
             <section class="card card--long border-radius border-top box-shadow bg--secondary">
@@ -93,12 +100,12 @@
       <!-- Services -->
       <!-------------->
       <section id="services">
-        <div class="section__header parallax l-main-content">
+        <div class="section__header parallax main-content">
           <h2 class="font-size--header font-color--secondary">Services</h2>
           <p class="section__text font-size--large font-color--secondary">I offer tutoring in the following subjects of speciality...</p>
         </div>
         <!-- Services table -->
-        <div style="transform: translateY(-10%);" class="services__table l-main-content">
+        <div class="services__table flex flex--column main-content section-content">
           <section class="service">
             <!-- Math -->
             <img class="service__img" src="./img/service-math.jpg" alt="Math">
@@ -130,12 +137,12 @@
       <!-- Contact -->
       <!------------->
       <section id="contact">
-        <div class="section__header parallax l-main-content">
+        <div class="section__header parallax main-content">
           <h2 class="font-size--header font-color--secondary">Contact</h2>
           <p class="section__text font-size--large font-color--secondary">If you have questions or looking to schedule, feel free to get in touch.</p>
         </div>
-        <div class="l-main-content">
-          <form style="transform: translateY(-25%);" class="contact__form flex border-radius font-color--secondary border-top box-shadow bg--primary">
+        <div class="main-content section-content">
+          <form class="contact__form flex border-radius font-color--secondary border-top box-shadow bg--primary">
             <section class="contact__input flex flex--column">
               <label for="name">Name</label>
               <input type="text" name="name">
@@ -181,6 +188,7 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="js/scrollToAnchor.js" type="text/javascript"></script>
+    <script src="js/toggleHeader.js" type="text/javascript"></script>
 
     <footer>
 
